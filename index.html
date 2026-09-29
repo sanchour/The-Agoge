@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, shrink-to-fit=no, viewport-fit=cover">
+  <meta name="color-scheme" content="dark">
+  <meta name="supported-color-schemes" content="dark">
+  <meta name="theme-color" content="#0A0A0C">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="AGOGE">
+  <meta name="description" content="Spartan body transformation tracker. Discipline is destiny.">
+  
+  <link rel="icon" type="image/svg+xml" href="icon.svg">
+  <link rel="apple-touch-icon" href="icon.svg">
+  <link rel="manifest" href="manifest.json">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/design-tokens.css?v=40">
+  <link rel="stylesheet" href="css/reset.css?v=40">
+  <link rel="stylesheet" href="css/typography.css?v=40">
+  <link rel="stylesheet" href="css/glass.css?v=40">
+  <link rel="stylesheet" href="css/animations.css?v=40">
+  <link rel="stylesheet" href="css/layout.css?v=40">
+  <link rel="stylesheet" href="css/components.css?v=40">
+  <link rel="stylesheet" href="css/liquid-slider.css?v=40">
+  <link rel="stylesheet" href="css/splash.css?v=40">
+  <link rel="stylesheet" href="css/home.css?v=40">
+  <link rel="stylesheet" href="css/statistics.css?v=40">
+  <link rel="stylesheet" href="css/stoa.css?v=40">
+  <link rel="stylesheet" href="css/settings.css?v=40">
+  
+  <title>AGOGE</title>
+</head>
+<body>
+  <!-- SPLASH SCREEN -->
+  <div id="splash" class="splash" aria-hidden="true">
+    <div class="splash__logo">
+      <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(60, 60) scale(0.42)">
+          <circle cx="0" cy="0" r="110" fill="none" stroke="var(--color-accent)" stroke-width="4" opacity="0.3" stroke-dasharray="90 20 40 20"/>
+          <path d="M-15 -90 L-75 80 L-40 80 L0 -25 L-15 -90 Z" fill="var(--color-accent)"/>
+          <path d="M15 -90 L75 80 L40 80 L0 -25 L15 -90 Z" fill="var(--color-accent)"/>
+          <polygon points="0,-100 -12,-65 12,-65" fill="var(--color-accent)"/>
+          <line x1="-28" y1="32" x2="28" y2="32" stroke="var(--color-accent)" stroke-width="4" stroke-linecap="round"/>
+        </g>
+      </svg>
+    </div>
+    <span class="splash__title">AGOGE</span>
+  </div>
+
+  <!-- APP SHELL -->
+  <div id="app" class="app" hidden>
+    
+    <!-- SCREEN: Home -->
+    <main id="screen-home" class="screen screen--active" role="tabpanel" aria-labelledby="tab-home">
+      <div class="screen__content" id="home-content">
+        <!-- Rendered by js/screens/home.js -->
+      </div>
+    </main>
+
+    <!-- SCREEN: Statistics -->
+    <main id="screen-statistics" class="screen" role="tabpanel" aria-labelledby="tab-statistics" hidden>
+      <div class="screen__content" id="statistics-content">
+        <!-- Rendered by js/screens/statistics.js -->
+      </div>
+    </main>
+
+    <!-- SCREEN: Stoa -->
+    <main id="screen-stoa" class="screen" role="tabpanel" aria-labelledby="tab-stoa" hidden>
+      <div class="screen__content" id="stoa-content">
+        <!-- Rendered by js/screens/stoa.js -->
+        <div class="screen__placeholder">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 1rem; color: var(--color-border-accent);"><rect x="4" y="2" width="16" height="4" rx="1"/><rect x="4" y="18" width="16" height="4" rx="1"/><path d="M6 6v12"/><path d="M10 6v12"/><path d="M14 6v12"/><path d="M18 6v12"/></svg>
+          <h2 class="font-display" style="margin-bottom: 0.5rem; color: var(--color-text-tertiary);">Stoa</h2>
+          <p class="text-tertiary">Doctrine & Protocols.</p>
+        </div>
+      </div>
+    </main>
+
+    <!-- SCREEN: Settings -->
+    <main id="screen-settings" class="screen" role="tabpanel" aria-labelledby="tab-settings" hidden>
+      <div class="screen__content" id="settings-content">
+        <div class="screen__placeholder">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="opacity: 0.3; margin-bottom: 1rem;"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+          <h2 class="font-display" style="margin-bottom: 0.5rem; color: var(--color-text-tertiary);">Settings</h2>
+          <p class="text-tertiary">Configuration options coming soon.</p>
+        </div>
+      </div>
+    </main>
+
+    <!-- MODAL CONTAINER (modals rendered here by JS) -->
+    <div id="modal-container"></div>
+
+    <!-- QUICK LOG FAB (rendered by quick-log.js into this container) -->
+    <div id="fab-container"></div>
+
+    <!-- FLOATING GLASS TAB BAR -->
+    <nav id="tab-bar" class="tab-bar glass-regular" role="tablist" aria-label="Main navigation">
+      <div class="tab-bar__indicator" id="tab-indicator"></div>
+      <button class="tab-bar__tab tab-bar__tab--active" role="tab" id="tab-home" aria-selected="true" aria-controls="screen-home" data-tab="home" aria-label="Home">
+        <span class="tab-bar__icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+        </span>
+        <span class="tab-bar__label sr-only">Home</span>
+      </button>
+      <button class="tab-bar__tab" role="tab" id="tab-statistics" aria-selected="false" aria-controls="screen-statistics" data-tab="statistics" aria-label="Statistics">
+        <span class="tab-bar__icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        </span>
+        <span class="tab-bar__label sr-only">Statistics</span>
+      </button>
+      <button class="tab-bar__tab" role="tab" id="tab-stoa" aria-selected="false" aria-controls="screen-stoa" data-tab="stoa" aria-label="Stoa">
+        <span class="tab-bar__icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="4" rx="1"/><rect x="4" y="18" width="16" height="4" rx="1"/><path d="M6 6v12"/><path d="M10 6v12"/><path d="M14 6v12"/><path d="M18 6v12"/></svg>
+        </span>
+        <span class="tab-bar__label sr-only">Stoa</span>
+      </button>
+      <button class="tab-bar__tab" role="tab" id="tab-settings" aria-selected="false" aria-controls="screen-settings" data-tab="settings" aria-label="Settings">
+        <span class="tab-bar__icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+        </span>
+        <span class="tab-bar__label sr-only">Settings</span>
+      </button>
+    </nav>
+  </div>
+
+  <script>
+    // File protocol check
+    if (window.location.protocol === 'file:') {
+      window.addEventListener('DOMContentLoaded', () => {
+        const splash = document.getElementById('splash');
+        if (splash) splash.remove();
+        const banner = document.createElement('div');
+        banner.style.cssText = 'position:fixed;top:0;left:0;right:0;bottom:0;background:#0A0A0C;color:#F3EFE6;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem;text-align:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+        banner.innerHTML = `
+          <div style="max-width:500px;background:#18181B;border:1px solid rgba(201,161,90,0.4);border-radius:16px;padding:2rem;box-shadow:0 12px 40px rgba(0,0,0,0.8);">
+            <div style="font-size:2rem;margin-bottom:1rem;">⚠️</div>
+            <h2 style="font-family:'Playfair Display',serif;color:#C9A15A;margin-bottom:0.75rem;">Opened via Local File</h2>
+            <p style="color:rgba(243,239,230,0.8);font-size:0.95rem;line-height:1.5;margin-bottom:1.5rem;">
+              Modern web apps use ES Modules, which browsers block when opening <code>index.html</code> directly from your file manager (<code>file:///</code>).
+            </p>
+            <a href="http://localhost:8080" style="display:inline-block;background:#C9A15A;color:#0A0A0C;font-weight:600;padding:0.75rem 1.5rem;border-radius:9999px;text-decoration:none;font-size:0.95rem;">Open http://localhost:8080</a>
+          </div>
+        `;
+        document.body.appendChild(banner);
+      });
+    }
+
+    // Diagnostic / Fallback UI if Javascript fails to execute (e.g. cached Syntax Errors)
+    setTimeout(() => {
+      // If the app successfully executed, it would have populated #home-content.
+      const homeContent = document.getElementById('home-content');
+      const innerStr = homeContent ? homeContent.innerHTML.trim() : '';
+      const isEmpty = innerStr === '' || innerStr.startsWith('<!--');
+      
+      if (homeContent && isEmpty) {
+        const splash = document.getElementById('splash');
+        if (splash) splash.remove();
+        const errBanner = document.createElement('div');
+        errBanner.style.cssText = 'position:fixed;top:15%;left:5%;right:5%;background:#8C2F2F;color:white;padding:20px;border-radius:12px;z-index:999999;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,0.5);font-family:sans-serif;';
+        errBanner.innerHTML = `
+          <h3 style="margin-top:0;">Cache Issue Detected</h3>
+          <p style="font-size:14px;margin-bottom:20px;">Your browser is serving a broken, cached version of the app.</p>
+          <button id="force-clear-btn" style="background:white;color:black;border:none;padding:10px 20px;border-radius:20px;font-weight:bold;cursor:pointer;">Clear Cache & Reload</button>
+        `;
+        document.body.appendChild(errBanner);
+
+        document.getElementById('force-clear-btn').addEventListener('click', async () => {
+          if ('caches' in window) {
+            const names = await caches.keys();
+            await Promise.all(names.map(name => caches.delete(name)));
+          }
+          if ('serviceWorker' in navigator) {
+            const regs = await navigator.serviceWorker.getRegistrations();
+            await Promise.all(regs.map(reg => reg.unregister()));
+          }
+          window.location.reload(true);
+        });
+      }
+    }, 2500);
+
+    // Global Error Handler to see what's failing on the device
+    window.addEventListener('error', function(e) {
+      const errDiv = document.createElement('div');
+      errDiv.style.cssText = 'position:fixed;top:10px;left:10px;right:10px;background:red;color:white;padding:15px;z-index:999999;font-size:12px;overflow:auto;max-height:50vh;';
+      errDiv.innerHTML = '<strong>JS Error:</strong><br/>' + e.message + '<br/>' + e.filename + ':' + e.lineno;
+      document.body.appendChild(errDiv);
+    });
+    window.addEventListener('unhandledrejection', function(e) {
+      const errDiv = document.createElement('div');
+      errDiv.style.cssText = 'position:fixed;top:10px;left:10px;right:10px;background:orange;color:black;padding:15px;z-index:999999;font-size:12px;overflow:auto;max-height:50vh;';
+      errDiv.innerHTML = '<strong>Promise Rejection:</strong><br/>' + (e.reason ? (e.reason.stack || e.reason.message || e.reason) : 'Unknown');
+      document.body.appendChild(errDiv);
+    });
+
+    // Hard fallback: never stay stuck on splash screen
+    setTimeout(() => {
+      const splash = document.getElementById('splash');
+      const app = document.getElementById('app');
+      if (app && app.hidden) app.hidden = false;
+      if (splash && !splash.classList.contains('splash--hidden')) {
+        splash.classList.add('splash--hidden');
+        setTimeout(() => splash.remove(), 600);
+      }
+    }, 1500);
+  </script>
+  <script type="module" src="js/app.js?v=40"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js?v=40').catch(console.error);
+      });
+    }
+  </script>
+</body>
+</html>

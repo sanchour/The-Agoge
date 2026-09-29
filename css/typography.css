@@ -1,0 +1,81 @@
+/*
+ * Typography Styles for AGOGE app
+ */
+
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  color: var(--color-text);
+  line-height: var(--lh-normal);
+  font-weight: var(--fw-normal);
+}
+
+.font-display,
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+}
+
+h1 {
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-wide);
+}
+
+h2 {
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+}
+
+h3 {
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-tight);
+}
+
+.text-hero {
+  font-family: var(--font-display);
+  font-size: var(--fs-hero);
+  font-weight: var(--fw-bold);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.text-body {
+  font-size: var(--fs-body);
+}
+
+.text-small {
+  font-size: var(--fs-small);
+}
+
+.text-caption {
+  font-size: var(--fs-caption);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-widest);
+  font-weight: var(--fw-medium);
+}
+
+.text-secondary {
+  color: var(--color-text-secondary);
+}
+
+.text-tertiary {
+  color: var(--color-text-tertiary);
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+.text-tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+.text-center {
+  text-align: center;
+}

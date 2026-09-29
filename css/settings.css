@@ -1,0 +1,135 @@
+/*
+ * Settings Screen Styles
+ */
+
+.settings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 0;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  flex-shrink: 0;
+}
+
+.settings-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-md);
+  background: var(--color-bg-card);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  min-width: 0;
+  gap: var(--space-sm);
+  flex-shrink: 0;
+  min-height: 54px;
+}
+
+.settings-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.settings-item-title {
+  font-weight: var(--fw-medium);
+  color: var(--color-text);
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.settings-item-desc {
+  font-size: var(--fs-small);
+  color: var(--color-text-secondary);
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.accent-swatches-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Custom Checkbox Toggle */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  transition: background-color var(--duration-normal) var(--ease-spring-gentle);
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 2px;
+  bottom: 2px;
+  background-color: var(--color-text-secondary);
+  border-radius: 50%;
+  transition: transform var(--duration-normal) var(--ease-spring-gentle),
+              background-color var(--duration-normal) var(--ease-spring-gentle);
+}
+
+input:checked + .toggle-slider {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+input:checked + .toggle-slider:before {
+  transform: translateX(20px);
+  background-color: var(--color-bg);
+}
+
+/* Destructive Button */
+.btn-destructive {
+  background: rgba(140, 47, 47, 0.1);
+  color: var(--color-cut-light);
+  border: 1px solid rgba(140, 47, 47, 0.2);
+  width: 100%;
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  font-weight: var(--fw-semibold);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-xs);
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.btn-destructive:active {
+  background: rgba(140, 47, 47, 0.2);
+  transform: scale(0.98);
+}

@@ -1,0 +1,86 @@
+/*
+ * Animation and Transition Styles for AGOGE app
+ */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translate3d(0, 30px, 0); opacity: 0; }
+  to { transform: translate3d(0, 0, 0); opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translate3d(0, 0, 0); opacity: 1; }
+  to { transform: translate3d(0, 30px, 0); opacity: 0; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.95) translate3d(0,0,0); opacity: 0; }
+  to { transform: scale(1) translate3d(0,0,0); opacity: 1; }
+}
+
+@keyframes ringFill {
+  from { stroke-dashoffset: var(--ring-circumference); }
+  to { stroke-dashoffset: var(--ring-offset); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 0 0 var(--color-accent-glow); }
+  50% { box-shadow: 0 0 20px 4px var(--color-accent-glow); }
+}
+
+@keyframes numberTick {
+  from { transform: translate3d(0, 20px, 0); opacity: 0; }
+  to { transform: translate3d(0, 0, 0); opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn var(--duration-normal) var(--ease-out) both;
+  will-change: opacity;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.animate-slide-up {
+  animation: slideUp var(--duration-spring) var(--ease-spring) both;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.animate-scale-in {
+  animation: scaleIn var(--duration-spring) var(--ease-spring) both;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2s var(--ease-in-out) infinite;
+  transform: translateZ(0);
+}
+
+.transition-spring {
+  transition: all var(--duration-spring) var(--ease-spring);
+}
+
+.transition-normal {
+  transition: all var(--duration-normal) var(--ease-out);
+}
+
+.transition-fast {
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-name: none !important;
+    transition-duration: 0.01ms !important;
+  }
+}

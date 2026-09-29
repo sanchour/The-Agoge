@@ -1,0 +1,300 @@
+/* Home Screen Styles */
+
+/* Layout */
+.home-layout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+/* Hero Card */
+.hero-card {
+  position: relative;
+}
+
+.hero-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: var(--space-md);
+}
+
+.hero-card__title-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.hero-card__name {
+  font-size: var(--fs-h2);
+}
+
+.hero-card__edit {
+  color: var(--color-text-tertiary);
+  transition: color var(--duration-fast) var(--ease-out);
+}
+.hero-card__edit:hover { color: var(--color-accent); }
+
+.hero-card__desc {
+  font-size: var(--fs-small);
+  margin-bottom: var(--space-lg);
+  line-height: var(--lh-relaxed);
+}
+
+.hero-card__metrics {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+  align-items: start;
+}
+
+.hero-card__metric-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.hero-card__metric {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-xs);
+}
+
+.hero-card__metric-row {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.hero-card__metric-divider {
+  width: 1px;
+  background: var(--color-border);
+  align-self: stretch;
+  margin: var(--space-sm) 0;
+}
+
+.hero-card__directives {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: var(--space-sm);
+}
+
+.hero-card__directive {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+  padding: var(--space-sm);
+  background: var(--color-bg-elevated);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+}
+
+/* Roadmap Strip */
+.roadmap-strip {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.roadmap-strip__header {
+  padding: 0 var(--space-xs);
+}
+
+.roadmap-strip__scroll {
+  display: flex;
+  gap: var(--space-sm);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: var(--space-xs) 0 var(--space-sm);
+  scrollbar-width: none;
+}
+.roadmap-strip__scroll::-webkit-scrollbar { display: none; }
+
+.roadmap-card {
+  flex: 0 0 auto;
+  width: 140px;
+  scroll-snap-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-spring);
+  text-align: left;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.roadmap-card:active { transform: scale(0.97); }
+
+.roadmap-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.roadmap-card__status-icon {
+  color: var(--color-success);
+}
+
+.roadmap-card__name {
+  font-family: var(--font-display);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-semibold);
+  color: var(--color-text);
+  line-height: var(--lh-tight);
+}
+
+.roadmap-card__period {
+  font-size: var(--fs-caption);
+  color: var(--color-text-tertiary);
+}
+
+.roadmap-card__target {
+  font-size: var(--fs-small);
+  font-weight: var(--fw-semibold);
+  color: var(--color-text-secondary);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Roadmap card states */
+.roadmap-card--active {
+  border-color: var(--color-border-accent);
+  background: linear-gradient(135deg, var(--color-accent-glow), transparent);
+}
+.roadmap-card--active .roadmap-card__name { color: var(--color-accent); }
+
+.roadmap-card--completed {
+  opacity: 0.6;
+}
+
+.roadmap-card--upcoming {
+  opacity: 0.5;
+}
+.roadmap-card--upcoming:hover { opacity: 0.8; }
+
+/* Discipline Ring */
+.discipline-ring {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  padding: var(--space-md);
+}
+
+.discipline-ring__chart {
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+}
+
+.discipline-ring__svg {
+  width: 100%;
+  height: 100%;
+}
+
+.discipline-ring__arc {
+  transition: stroke-dashoffset var(--duration-spring) var(--ease-spring);
+}
+
+.discipline-ring__labels {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.discipline-ring__label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+/* Quick Log FAB */
+.quick-log-fab {
+  position: fixed;
+  bottom: calc(var(--tab-bar-height) + var(--tab-bar-bottom) + var(--space-md));
+  right: var(--space-lg);
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-pill);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent);
+  z-index: 50;
+  transition: transform var(--duration-fast) var(--ease-spring);
+  -webkit-tap-highlight-color: transparent;
+  border: 1px solid var(--color-border-accent);
+}
+
+.quick-log-fab:active {
+  transform: scale(0.9);
+}
+
+body:not(:has(#screen-home.screen--active)) #fab-container {
+  display: none;
+}
+
+/* Onboarding */
+.onboarding {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  padding: var(--space-lg);
+}
+
+.onboarding__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 340px;
+  width: 100%;
+}
+
+.onboarding__icon {
+  color: var(--color-accent);
+  margin-bottom: var(--space-lg);
+}
+
+.onboarding__title {
+  font-size: var(--fs-h2);
+  margin-bottom: var(--space-sm);
+}
+
+.onboarding__subtitle {
+  font-size: var(--fs-small);
+  max-width: 280px;
+}
+
+/* Martial Art Placeholder */
+.martial-art-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+}
+
+.martial-art-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--space-2xl);
+  gap: var(--space-md);
+  max-width: 320px;
+  border-radius: var(--radius-xl);
+}
+
+.martial-art-card__icon {
+  margin-bottom: var(--space-sm);
+}
+
+.martial-art-card__title {
+  font-size: var(--fs-h1);
+  color: var(--color-accent);
+}

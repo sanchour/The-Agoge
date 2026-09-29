@@ -1,0 +1,59 @@
+{
+  "_meta": {
+    "version": "1.1.0",
+    "source": "AGOGE 3.0",
+    "migratedAt": "2026-09-21"
+  },
+  "spartanRanks": [
+    { "rank": "I", "title": "Neophyte", "minLBM": 0, "icon": "shield", "desc": "Starting baseline. Building foundational training discipline." },
+    { "rank": "II", "title": "Agoge Cadet", "minLBM": 49.0, "icon": "swords", "desc": "Visceral fat cleared. The body is primed for Bulk I." },
+    { "rank": "III", "title": "Hoplite", "minLBM": 54.0, "icon": "shield", "desc": "Established muscle foundation. Solid physique structure." },
+    { "rank": "IV", "title": "Captain", "minLBM": 58.0, "icon": "columns", "desc": "Commanding intermediate muscle size and physical poise." },
+    { "rank": "V", "title": "Commander", "minLBM": 61.5, "icon": "flame", "desc": "Heavy compound master commanding serious physical presence." },
+    { "rank": "VI", "title": "General", "minLBM": 64.0, "icon": "trophy", "desc": "Crossed 80kg frame threshold. Advanced natural strength." },
+    { "rank": "VII", "title": "Titan", "minLBM": 68.5, "icon": "crown", "desc": "The ultimate culmination: 77.5kg @ 10% BF. Calm, lethal identity." }
+  ],
+  "contingencyProtocols": [
+    { "situation": "Transition Maintenance (1–2 Wks)", "action": "Spend 1 to 2 weeks at true maintenance TDEE (0 deficit/surplus). Restores metabolic rate, resets hormones, and consolidates muscle tissue before starting next phase.", "icon": "shield" },
+    { "situation": "Trip 3–5 days", "action": "Train hard 3 days before, 1–2 bodyweight sessions during, back in gym within 48h of return.", "icon": "briefcase" },
+    { "situation": "Friends over for weekend", "action": "Gym Friday morning before they arrive, back Monday. 2 days off is nothing.", "icon": "users" },
+    { "situation": "Longer trip (1 week+)", "action": "Full body gym sessions every 3–4 days if possible, protein non-negotiable daily.", "icon": "plane" },
+    { "situation": "No gym access at all", "action": "2× bodyweight sessions per week, push to near failure, protect protein.", "icon": "tent" },
+    { "situation": "Completely off during a trip", "action": "Accept it, treat it as a deload, return immediately after without guilt.", "icon": "palmtree" }
+  ],
+  "corePrinciples": [
+    { "number": 1, "title": "Caloric & Macro Discipline", "description": "Hit your TDEE target with ruthless precision. Protein is non-negotiable (1.8-2.2g/kg). Carbs drive performance; fats govern hormones." },
+    { "number": 2, "title": "Scale Weight Noise", "description": "Ignore daily scale spikes. Weigh daily, judge weekly via rolling 7-day averages. Sodium, hydration, and carbs dictate the noise." },
+    { "number": 3, "title": "Sleep is Not Optional", "description": "Recovery dictates growth. Under-sleeping destroys nutrient partitioning, tanks testosterone, and guarantees muscle loss during a cut." },
+    { "number": 4, "title": "Progressive Overload", "description": "Training must force adaptation. You must consistently add weight or reps. Maintenance training leads to a maintenance physique." },
+    { "number": 5, "title": "Diet Breaks & Refeeds", "description": "Never cut in a deficit for more than 14 straight weeks. Take 1-2 week maintenance breaks to reset metabolic adaptation and diet fatigue." },
+    { "number": 6, "title": "Hydration Baselines", "description": "Drink 3-4 liters daily. Dehydration drastically reduces strength output, increases joint pain, and causes wild scale weight fluctuations." },
+    { "number": 7, "title": "Travel & Social Adaptation", "description": "Trips and weekends are managed, not avoided. Adhere to Contingency Protocols to lock in battle plans without breaking momentum." }
+  ],
+  "fieldManual": [
+    { "title": "Measurement Protocol", "content": "Weigh in every morning immediately after waking up and using the restroom, before eating or drinking anything. Measure body fat visually and with calipers under the same lighting conditions every 2 weeks." },
+    { "title": "Supplement Stack", "content": "Creatine Monohydrate (5g/day), Whey Protein Isolate (as needed to hit macros), Vitamin D3, Omega-3 Fish Oil. Keep it simple and effective." },
+    { "title": "Training Split", "content": "Upper/Lower or Push/Pull/Legs depending on current recovery capacity. Focus on compound lifts: Squats, Deadlifts, Bench Press, Overhead Press, Pull-ups." },
+    { "title": "Phase Transitions", "content": "When transitioning between CUT and BULK, always take a 1-2 week maintenance break to stabilize hormones and reset your baseline weight." }
+  ],
+  "diagnosticQuiz": {
+    "cuttingStopSignals": [
+      { "id": "sixpack", "label": "Visual: Clear six-pack visible at rest", "category": "visual" },
+      { "id": "veins", "label": "Visual: Veins clearly visible on forearms at rest", "category": "visual" },
+      { "id": "striations", "label": "Visual: Striations visible on shoulders/chest", "category": "visual" },
+      { "id": "gaunt", "label": "Visual: Face looks gaunt or overly sharp", "category": "visual" },
+      { "id": "hunger", "label": "Physical: Constant hunger that never goes away", "category": "physical" },
+      { "id": "cold", "label": "Physical: Always cold, even indoors", "category": "physical" },
+      { "id": "motivation", "label": "Physical: Training motivation tanks / irritability", "category": "physical" }
+    ],
+    "bulkingStopSignals": [
+      { "id": "lovehandles", "label": "Visual: Love handles clearly visible and grabbable", "category": "visual" },
+      { "id": "absdisappear", "label": "Visual: Lower abs completely disappear", "category": "visual" },
+      { "id": "puffy", "label": "Visual: Face looks puffy, jawline softens", "category": "visual" },
+      { "id": "clothestight", "label": "Physical: Clothes tight around waist, not shoulders", "category": "physical" },
+      { "id": "sluggish", "label": "Physical: Feel sluggish and heavy, not just 'big'", "category": "physical" },
+      { "id": "sleep", "label": "Physical: Sleep quality drops", "category": "physical" }
+    ],
+    "thresholdRule": "If 3 or more signals are checked, a transition is strongly recommended."
+  }
+}

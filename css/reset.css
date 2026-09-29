@@ -1,0 +1,183 @@
+/*
+ * Modern CSS Reset for AGOGE app
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  touch-action: manipulation;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  color-scheme: dark;
+  scroll-behavior: smooth;
+  font-size: 100%;
+  touch-action: manipulation;
+  -ms-touch-action: manipulation;
+  overscroll-behavior: none;
+  overscroll-behavior-y: none;
+  overscroll-behavior-x: none;
+  width: 100%;
+  height: 100%;
+  height: 100vh;
+  height: 100dvh;
+  height: var(--app-height, 100dvh);
+  height: -webkit-fill-available;
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  /* Fill the very bottom of the iPhone screen behind the home indicator */
+  background-color: #0A0A0C;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  height: 100vh;
+  height: 100dvh;
+  height: var(--app-height, 100dvh);
+  height: -webkit-fill-available;
+  min-height: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  min-height: -webkit-fill-available;
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  line-height: var(--lh-normal);
+  touch-action: manipulation;
+  -ms-touch-action: manipulation;
+  overscroll-behavior: none;
+  overscroll-behavior-y: none;
+  overscroll-behavior-x: none;
+  background-color: #0A0A0C;
+}
+
+/* Nuclear option: fixed full-bleed dark background layer that always covers
+   the entire physical screen, including the iOS home indicator zone */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  height: 100vh;
+  height: 100dvh;
+  height: var(--app-height, 100dvh);
+  background: #0A0A0C;
+  z-index: -9999;
+  pointer-events: none;
+}
+
+body.theme-light,
+body.theme-light::before {
+  background-color: #F3EFE6 !important;
+}
+
+/* iOS native feel: contain scrolling within inner containers */
+.screen,
+.modal-sheet,
+.modal-sheet__body,
+.calendar-view,
+.settings-list {
+  overscroll-behavior-y: contain;
+}
+
+/* iOS native feel: disable tap highlight and callout menu on interactive UI chrome */
+button,
+a,
+.card,
+.tab-bar,
+.segmented-control,
+.stoa-tile,
+.btn,
+.btn-icon,
+.toggle-switch,
+.modal-sheet__handle,
+.modal-sheet__header {
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  touch-action: manipulation;
+}
+
+input,
+textarea,
+select {
+  font-size: 16px !important; /* CRITICAL: Strictly enforce 16px to prevent iOS Safari auto-zoom on input focus */
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  overflow-wrap: break-word;
+}
+
+p {
+  overflow-wrap: break-word;
+}
+
+#root,
+#app {
+  isolation: isolate;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: var(--radius-xs);
+}
