@@ -1,7 +1,7 @@
 {
   "name": "AGOGE",
   "short_name": "AGOGE",
-  "start_url": "/",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#0A0A0C",
   "theme_color": "#0A0A0C",
